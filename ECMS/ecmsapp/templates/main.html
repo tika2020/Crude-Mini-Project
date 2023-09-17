@@ -1,0 +1,311 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <!-- index.html  21 Nov 2019 03:44:50 GMT -->
+
+  <!-- Head Section -->
+  {% include "includes/head.html" %}
+  <!-- End Head Section -->
+
+  <body>
+    <div class="loader"></div>
+    <div id="app">
+      <div class="main-wrapper main-wrapper-1">
+        <div class="navbar-bg"></div>
+
+        <!-- Nav Bar Section  -->
+        {% include "includes/nav.html" %}
+        <!-- End Nav Bar Section -->
+
+        <!-- Side Bar Section -->
+        {% include "includes/sidebar.html" %}
+        <!-- End Side Bar Section -->
+
+        <!-- Main Content -->
+        <div class="main-content">
+          <section class="section">
+            
+
+            
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                  <div class="card-icon l-bg-purple">
+                    <i class="fas fa-dollar-sign"></i>
+                  </div>
+                  <div class="card-wrap">
+                    <div class="padding-20">
+                      <div class="text-right">
+                        <h3 class="font-light mb-0">
+                          <i class="ti-arrow-up text-success"></i>${{ totalAmount }}.00
+                        </h3>
+                        <span class="text-muted">Incomme</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                  <div class="card-icon l-bg-green">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <div class="card-wrap">
+                    <div class="padding-20">
+                      <div class="text-right">
+                        <h3 class="font-light mb-0">
+                          <i class="ti-arrow-up text-success"></i> {{totalUsers}}
+                        </h3>
+                        <span class="text-muted">Total Users</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                  <div class="card-icon l-bg-cyan">
+                    <i class="fas fa-briefcase"></i>
+                  </div>
+                  <div class="card-wrap">
+                    <div class="padding-20">
+                      <div class="text-right">
+                        <h3 class="font-light mb-0">
+                          <i class="ti-arrow-up text-success"></i> {{countExistSerService}}
+                        </h3>
+                        <span class="text-muted">Services</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xl-4 col-lg-6">
+                <div class="card">
+                  <div class="card-body card-type-3">
+                    <div class="row">
+                      <div class="col">
+                        <h6 class="text-muted mb-0">Total Housess</h6>
+                        <span class="font-weight-bold mb-0">{{countExistHouses}}</span>
+                      </div>
+                      <div class="col-auto">
+                        <div class="card-circle l-bg-orange text-white">
+                          <i data-feather="home"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="mt-3 mb-0 text-muted text-sm">
+                      <span class="text-nowrap">Deleted House</span>
+                      <span class="text-danger mr-2">{{countdeletetHouses}}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6">
+                <div class="card">
+                  <div class="card-body card-type-3">
+                    <div class="row">
+                      <div class="col">
+                        <h6 class="text-muted mb-0">Total Renters</h6>
+                        <span class="font-weight-bold mb-0">{{countExisttRenters}}</span>
+                      </div>
+                      <div class="col-auto">
+                        <div class="card-circle l-bg-cyan text-white">
+                          <i data-feather="users"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="mt-3 mb-0 text-muted text-sm">
+                      <span class="text-nowrap">Deleted Renters</span>
+                      <span class="text-danger mr-2">{{countdeletetRenters}}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6">
+                <div class="card">
+                  <div class="card-body card-type-3">
+                    <div class="row">
+                      <div class="col">
+                        <h6 class="text-muted mb-0">Total Enviroments</h6>
+                        <span class="font-weight-bold mb-0">{{countExistEnviroment}}</span>
+                      </div>
+                      <div class="col-auto">
+                        <div class="card-circle l-bg-green text-white">
+                          <i data-feather="zap"></i>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <p class="mt-3 mb-0 text-muted text-sm">
+                      <span class="text-nowrap">Deleted Enviroments</span>
+                      <span class="text-danger mr-2">{{countdeletetEnviroment}}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                  <div class="card-icon l-bg-cyan">
+                    <i class="fas fa-dollar-sign"></i>
+                  </div>
+                  <div class="card-wrap">
+                    <div class="padding-20">
+                      <div class="text-right">
+                        <h3 class="font-light mb-0">
+                          <i class="ti-arrow-up text-success"></i>${{EvcAccount}}.00
+                        </h3>
+                        <span class="text-muted">Total Evc-Plus</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                  <div class="card-icon l-bg-green">
+                    <i class="fas fa-dollar-sign"></i>
+                  </div>
+                  <div class="card-wrap">
+                    <div class="padding-20">
+                      <div class="text-right">
+                        <h3 class="font-light mb-0">
+                          <i class="ti-arrow-up text-success"></i>${{CashAccount}}.00
+                        </h3>
+                        <span class="text-muted">Total Cash</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                  <div class="card-icon l-bg-purple">
+                    <i class="fas fa-dollar-sign"></i>
+                  </div>
+                  <div class="card-wrap">
+                    <div class="padding-20">
+                      <div class="text-right">
+                        <h3 class="font-light mb-0">
+                          {% if MerchantAccount == None %}
+                          <i class="ti-arrow-up text-success"></i>$0.00
+                          {% else %}
+                          <i class="ti-arrow-up text-success"></i>${{ MerchantAccount }}.00
+                          {% endif %}
+                        </h3>
+                        <span class="text-muted">Total Merchant</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+            
+          <div class="row">
+            <div class="col-md-6 col-lg-12 col-xl-6">
+              <!-- Lateast Activitys -->
+              
+              <div class="card">
+                <div class="card-header">
+                  <h4>latest Activity</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Payer</th>
+                          <th>Date</th>
+                          <th>price</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for data in topTransaction %}
+                        <tr>
+                          <td>{{forloop.counter}}</td>
+                          <td>{{data.service.enviroment.renter.name}}- 
+                            ({{data.service.enviroment.renter.tell}})</td>
+                          <td>{{data.date}}</td>
+                          <td>${{data.price}}.00</td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- Lateast Activitys -->
+            </div>
+            <div class="col-md-6 col-lg-12 col-xl-6">
+              <!-- Lateast Activitys -->
+              
+              <div class="card">
+                <div class="card-header">
+                  <h4>latest Activity</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Renter</th>
+                          <th>House</th>
+                          <th>Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for Enviroment in topEnviroment %}
+                        <tr>
+                          <td>{{ forloop.counter }}</td>
+                          <td>{{ Enviroment.renter.name }}</td>
+                          <td>{{ Enviroment.house.district }}-{{ Enviroment.house.houseno }} ({{ Enviroment.house.type }}) </td>
+                          <td>{{ Enviroment.register_date }}</td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- Lateast Activitys -->
+
+            </div>
+          </div>
+
+
+          </section>
+
+          <!-- Setting Bar Sections -->
+          {% include "includes/settingbar.html" %}
+          <!-- Ending Setting Bar Sections -->
+        </div>
+
+        <!-- Footbar Section -->
+        {% include "includes/footer.html" %}
+        <!-- EndFootbar Section -->
+      </div>
+    </div>
+
+    <!-- General JS Scripts -->
+    {% include "includes/scripts.html" %}
+    <!-- Scripts -->
+  </body>
+
+  {{ redirect_to_login_immediately }}
+  <!-- index.html  21 Nov 2019 03:47:04 GMT -->
+</html>
